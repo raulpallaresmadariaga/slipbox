@@ -16,7 +16,7 @@ Preparing for an MBA starting August 2027, targeting Harvard, Booth, Wharton, MI
 
 Recurring domains his reading is likely to touch, roughly in order of relevance: product strategy and leadership, GTM/RevOps, compensation design, executive presence and influence, venture capital and LATAM market strategy, data-driven decision-making.
 
-Use this context actively, not just as background: when drafting a note's `applies_to` field, proposing an index cluster, or judging whether a draft clears the summary gate (Rule 4), reach for a real, specific connection to this context — "this is how Nova's governance problem actually works," not "this could apply to product management in general." If a connection is ambiguous, ask Raul rather than inventing one that sounds plausible but doesn't actually hold — a false `applies_to` is worse than none, because it corrupts the exact thing this system exists to protect. If Raul's role or focus changes, he'll tell you to update this section — don't infer changes to it on your own.
+Use this context actively, not just as background: when drafting a note's `applies_to` field, assigning its `tags`, proposing an index cluster, or judging whether a draft clears the summary gate (Rule 4), reach for a real, specific connection to this context — "this is how Nova's governance problem actually works," not "this could apply to product management in general." If a connection is ambiguous, ask Raul rather than inventing one that sounds plausible but doesn't actually hold — a false `applies_to` is worse than none, because it corrupts the exact thing this system exists to protect. If Raul's role or focus changes, he'll tell you to update this section — don't infer changes to it on your own.
 
 ## Repo structure
 
@@ -86,8 +86,12 @@ Frontmatter:
 id: YYYYMMDDHHMM
 title:
 type: reflection | concept   # reflection: subject to the Rule 4 summary gate. concept: atomic idea, no personal-reaction requirement.
-theme:              # one primary filing category, e.g. "Strategy", "Leadership", "Compensation Design"
-tags: []            # optional secondary tags
+theme:              # one primary filing category. Freeform — chosen fresh per note, never from a fixed list.
+                      # "Strategy", "Leadership", "Compensation Design" etc. are illustrative past examples,
+                      # not a closed vocabulary. A note about a new domain (cooking, public speaking, whatever
+                      # Raul's focus becomes) just gets a new theme — no rule change needed.
+tags: []            # required — at least one. Captures every other domain the note legitimately touches, so
+                      # theme (singular) never forces a false either/or on an idea that spans domains.
 source: <sources-slug or page ref>, or "original" if it's Raul's own synthesis across sources
 links:
   - id: <other-note-id>
@@ -98,6 +102,8 @@ applies_to: >        # required for type: reflection — how this shows up in Ra
 ```
 
 Body: the idea rewritten so it stands on its own, without needing the source to make sense.
+
+`theme` and `tags` are assigned together, when the candidate is drafted — not added in a later pass. Assign them the same way `applies_to` gets assigned: a real judgment call about what the note actually touches, not a lookup against an existing list.
 
 ## Rule 6 — Linking
 
@@ -117,6 +123,7 @@ A GitHub Action runs on every push to `main`: it parses `links:` across all note
 - Never guess which source an untagged capture belongs to.
 - Never let a `type: reflection` note through that is purely the source's idea restated (Rule 4). A `type: concept` note restating the idea cleanly and atomically is fine — that's its job.
 - Never invent a relationship link that doesn't clearly hold — ask if unsure.
+- Never write a permanent note with `tags: []` empty — every note gets at least one tag, assigned at draft time alongside theme.
 
 ## Stage 2 (not built yet — do not implement until Raul asks)
 
