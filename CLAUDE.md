@@ -4,7 +4,7 @@ This repo is Raul's personal slipbox: a structured reading/notes system built fo
 (1) retain and connect what he reads instead of forgetting it, and
 (2) build a real library of his own applied thinking (not book summaries) for career use and an eventual MBA application.
 
-**The whole point of this repo is that it is NOT the same as asking Claude cold.** Claude already knows the textbook content of most books Raul reads. The value here is everything Claude can't produce on its own: Raul's own reaction to an idea, and its connection to what he's actually lived and done (Worky, Nova, Cobre, GTM, comp design, etc). Every rule below exists to protect that distinction. When in doubt, favor rules that force Raul's own thinking onto the page over rules that make filing convenient.
+**The whole point of this repo is that it is NOT the same as asking Claude cold.** Claude already knows the textbook content of most books Raul reads. The value here is everything Claude can't produce on its own: Raul's own reaction to an idea, and its connection to what he's actually lived and done (Worky, Nova, Cobre, GTM, comp design, etc). Every rule below exists to protect that distinction. When in doubt, favor rules that force Raul's own thinking onto the page over rules that make filing convenient. (Concept notes, introduced in Rule 4, are the one deliberate exception — they exist to give reflection notes correctly-categorized, linkable material to connect to, not to replace them.)
 
 ## Context — who this is for
 
@@ -60,17 +60,21 @@ Body holds literature notes: raw captures organized by idea (not chronology) onc
 2. Group by source. For each source, fold captures into that source's literature notes (organize by idea).
 3. From the literature notes, draft **candidate** permanent notes. Do not write to `notes/` yet — present candidates for Raul's review first, always.
 
-## Rule 4 — The summary gate (the most important rule in this file)
+## Rule 4 — The summary gate, and the concept-note alternative (the most important rule in this file)
 
-Before proposing any draft as a permanent note, check it against this bar. A draft may proceed **only if it has at least one of**:
+Every candidate for `notes/` is one of two types, set via `type:` in its frontmatter (Rule 5). Which bar it has to clear depends on the type.
+
+**`type: reflection`** — the summary gate applies. Before proposing any draft as a reflection note, check it against this bar. A draft may proceed **only if it has at least one of**:
 
 - A personal reaction, judgment, disagreement, or open question, in Raul's voice
 - An explicit connection to Raul's own work or experience
 - An explicit relationship (agrees / contradicts / extends / is-an-example-of) to a note already in `notes/`
 
-If a draft has **none** of these — it's just the book's idea restated — reject it. Do not write it to `notes/`. Instead, ask Raul directly: what's your take on this, where have you seen this show up, does this support or clash with something you've already written. Nothing gets promoted until there's something of his own attached.
+If a draft has **none** of these — it's just the book's idea restated — it doesn't qualify as a reflection note. Don't write it to `notes/` as one. Instead, ask Raul directly: what's your take on this, where have you seen this show up, does this support or clash with something you've already written. Nothing gets promoted as a reflection until there's something of his own attached — or, if the idea is worth keeping anyway, it can go in as a concept note instead (below).
 
-Not every capture deserves to become a permanent note, and that's fine — weak material can just sit unpromoted in a source file rather than being force-processed into a mediocre note. It also doesn't have to happen the week it was captured: a short delay before finalizing a note is a feature, not a bug — the ideas that still feel important a few weeks later are usually the ones worth keeping (this is deliberately borrowed from Ryan Holiday's own notecard practice: he waits weeks after finishing a book before carding anything, precisely to separate what stuck from what merely stood out on first read).
+**`type: concept`** — no personal-reaction requirement. A concept note captures an idea worth having as a standalone, linkable node in the graph — correctly themed and tagged, and rewritten in Raul's own words so it stands on its own (Rule 5) rather than pasted or lightly edited from the source. The bar here is lighter than the summary gate, but not zero: the idea still has to be understood well enough to restate cleanly and atomically. A `type: concept` note still needs Raul's review before it's written (Rule 9) — the relaxed bar is about content, not about skipping approval.
+
+Not every capture deserves to become a permanent note of either type, and that's fine — weak material can just sit unpromoted in a source file rather than being force-processed into a mediocre note. It also doesn't have to happen the week it was captured: a short delay before finalizing a note is a feature, not a bug — the ideas that still feel important a few weeks later are usually the ones worth keeping (this is deliberately borrowed from Ryan Holiday's own notecard practice: he waits weeks after finishing a book before carding anything, precisely to separate what stuck from what merely stood out on first read).
 
 ## Rule 5 — Permanent note format
 
@@ -81,14 +85,16 @@ Frontmatter:
 ```yaml
 id: YYYYMMDDHHMM
 title:
+type: reflection | concept   # reflection: subject to the Rule 4 summary gate. concept: atomic idea, no personal-reaction requirement.
 theme:              # one primary filing category, e.g. "Strategy", "Leadership", "Compensation Design"
 tags: []            # optional secondary tags
 source: <sources-slug or page ref>, or "original" if it's Raul's own synthesis across sources
 links:
   - id: <other-note-id>
     relation: supports | contradicts | extends | example-of
-applies_to: >        # required — how this shows up in Raul's actual work or life. This is the field
-                      # that makes this different from a search index over books he's read.
+applies_to: >        # required for type: reflection — how this shows up in Raul's actual work or life. This is
+                      # the field that makes reflections different from a search index over books he's read.
+                      # Optional for type: concept.
 ```
 
 Body: the idea rewritten so it stands on its own, without needing the source to make sense.
@@ -109,7 +115,7 @@ A GitHub Action runs on every push to `main`: it parses `links:` across all note
 
 - Never write to `notes/` without Raul reviewing the draft first.
 - Never guess which source an untagged capture belongs to.
-- Never let a permanent note through that is purely the source's idea restated (Rule 4).
+- Never let a `type: reflection` note through that is purely the source's idea restated (Rule 4). A `type: concept` note restating the idea cleanly and atomically is fine — that's its job.
 - Never invent a relationship link that doesn't clearly hold — ask if unsure.
 
 ## Stage 2 (not built yet — do not implement until Raul asks)
