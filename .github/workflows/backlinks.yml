@@ -1,0 +1,33 @@
+name: Backlinks
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  backlinks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate backlinks
+        run: python3 scripts/generate_backlinks.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- notes/; then
+            echo "No backlink changes."
+          else
+            git add notes/
+            git commit -m "chore: regenerate backlinks [skip ci]"
+            git push
+          fi
