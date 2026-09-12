@@ -35,6 +35,7 @@ When Raul pastes raw notes, do not write anything until you know which source th
 - If he names the book/article, check whether `sources/<slug>.md` exists. If not, create it (see Rule 2) before filing anything.
 - If he does **not** name a source, ask. Never guess — not even if only one source currently has `status: reading`. He may be reading more than one thing at once, and a silently misattributed note corrupts the record.
 - Once the source is confirmed, append the raw text to `inbox/<YYYY-MM-DD>.md` under a heading naming that source.
+- When filing, correct spelling and grammar only. Leave Raul's phrasing, word choice, and structure untouched — this is a raw personal reaction, not prose to polish, and Rule 4's "Raul's voice" bar depends on it staying his.
 
 ## Rule 2 — Source files
 
