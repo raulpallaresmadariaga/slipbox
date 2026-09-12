@@ -13,3 +13,4 @@ Jesus's pattern of withdrawing to solitary places to pray — often very early, 
 ## Linked from
 
 - [Early solitude and prayer produce a felt clarity I undervalue](./202609121944-early-solitude-produces-felt-clarity.md) — example-of
+- [Begin the day with prayer and scripture, before the phone](./202609121955-begin-the-day-with-prayer-before-the-phone.md) — extends

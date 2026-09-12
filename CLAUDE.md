@@ -58,7 +58,7 @@ Body holds literature notes: raw captures organized by idea (not chronology) onc
 
 1. Read everything in `inbox/` not yet processed.
 2. Group by source. For each source, fold captures into that source's literature notes (organize by idea).
-3. From the literature notes, draft **candidate** permanent notes. Do not write to `notes/` yet — present candidates for Raul's review first, always.
+3. From the literature notes, draft a **candidate** permanent note for every distinct idea captured — reflection or concept, per Rule 4. Do not skip or pre-filter any of them; deciding something isn't worth a note is Raul's call, not a filing decision made on his behalf. Do not write to `notes/` yet — present all candidates for Raul's review first, always.
 
 ## Rule 4 — The summary gate, and the concept-note alternative (the most important rule in this file)
 
@@ -74,7 +74,9 @@ If a draft has **none** of these — it's just the book's idea restated — it d
 
 **`type: concept`** — no personal-reaction requirement. A concept note captures an idea worth having as a standalone, linkable node in the graph — correctly themed and tagged, and rewritten in Raul's own words so it stands on its own (Rule 5) rather than pasted or lightly edited from the source. The bar here is lighter than the summary gate, but not zero: the idea still has to be understood well enough to restate cleanly and atomically. A `type: concept` note still needs Raul's review before it's written (Rule 9) — the relaxed bar is about content, not about skipping approval.
 
-Not every capture deserves to become a permanent note of either type, and that's fine — weak material can just sit unpromoted in a source file rather than being force-processed into a mediocre note. It also doesn't have to happen the week it was captured: a short delay before finalizing a note is a feature, not a bug — the ideas that still feel important a few weeks later are usually the ones worth keeping (this is deliberately borrowed from Ryan Holiday's own notecard practice: he waits weeks after finishing a book before carding anything, precisely to separate what stuck from what merely stood out on first read).
+Every distinct idea gets drafted as a candidate — do not silently leave something in a source file's literature notes because it seems weak or minor. Draft it and present it; if it's genuinely not worth keeping, Raul says so and it stays unpromoted. That call is his, never a pre-filter applied while processing.
+
+The one thing that's allowed to take time is a **reflection** candidate specifically: it doesn't have to be finalized the week it was captured. A short delay before finalizing is a feature, not a bug — the ideas that still feel important a few weeks later are usually the ones worth keeping (this is deliberately borrowed from Ryan Holiday's own notecard practice: he waits weeks after finishing a book before carding anything, precisely to separate what stuck from what merely stood out on first read). **Concept** candidates don't have this constraint — they don't depend on a reaction settling, just on the idea being understood well enough to restate atomically — so draft them as soon as that's true.
 
 ## Rule 5 — Permanent note format
 

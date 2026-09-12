@@ -16,3 +16,7 @@ applies_to: >
 ---
 
 By Meyer Friedman's definition — a continuous struggle to accomplish more and more in less and less time — I've been living with hurry sickness for over five years. What scares me isn't just the physical risk it's associated with; it's that I've built my entire working identity around this mode, and I genuinely don't know another way to operate. That's the part worth sitting with: the fear isn't of slowing down, it's of not knowing who I am if I do.
+
+## Linked from
+
+- [The slow-down practices I'm actually drawn to](./202609121953-slow-down-practices-im-drawn-to.md) — extends

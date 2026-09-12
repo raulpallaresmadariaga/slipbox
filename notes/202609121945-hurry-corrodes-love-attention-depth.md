@@ -15,3 +15,4 @@ Hurry isn't the same thing as being busy. Busyness is a schedule condition; hurr
 - [Distance from God during career-only periods breeds overwhelm](./202609121941-distance-from-god-breeds-overwhelm.md) — example-of
 - [Instagram comparison replaces gratitude with borrowed motivation](./202609121943-instagram-comparison-erodes-gratitude.md) — example-of
 - [The flesh is the irrational self; resources reveal where the heart is](./202609121952-the-flesh-is-the-irrational-self.md) — extends
+- [Ambition to live a quiet life](./202609121958-ambition-to-live-a-quiet-life.md) — extends
