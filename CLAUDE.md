@@ -51,6 +51,8 @@ permanent_notes: []   # ids of permanent notes this source has produced
 
 Body holds literature notes: raw captures organized by idea (not chronology) once processed out of inbox/. Literature notes are allowed to stay close to the source text — they are not held to the Rule 4 bar below, only permanent notes are.
 
+**Date fields, always full `YYYY-MM-DD`:** if Raul gives only a month and year (e.g. "January 2026"), assume the 1st of that month unless he states an exact day. Never write a partial date like `2026-01` into any frontmatter field.
+
 ## Rule 3 — Processing run (weekly, manual or scheduled)
 
 1. Read everything in `inbox/` not yet processed.
